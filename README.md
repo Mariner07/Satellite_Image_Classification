@@ -28,7 +28,7 @@ There are several constraints for this solution in terms of the data quality, da
 
 - **Data quality**: The images used in this project are of low resolution, which limits the ability of the models to achieve high accuracy. Additionally, it is important to note that the presence of clouds in the images can impact the performance of the models.
 
-- **Data variability**: The classes with the lowest recall are *PermanentCrop* (0.69), *AnnualCrop*(0.88) and *Pasture* (0.84. Upon further examination of the images in these classes, it is evident that they belong to the agricultural umbrella class and may not exhibit significant variability.
+- **Data variability**: The classes with the lowest recall are *PermanentCrop* (0.69), *AnnualCrop*(0.88) and *Pasture* (0.84. Upon further examination of the images in these classes, it is evident that they belong to the agricultural umbrella class and may not exhibit significant variability. Furthermore, exploration of the misclassification of *PermanentCrop* as *HerbaceousVegetation* in the result section further supports this constraint
 
 - **Vague requirements**: Due to the lack of clear requirements, it is uncertain which architecture is best suited for completing the task, which class prediction to prioritize, and subsequently which evaluation metrics to use for the models.
 
@@ -36,10 +36,10 @@ There are several constraints for this solution in terms of the data quality, da
 
 There are several potential improvements that can be made to this solution. Looking at the per-class classification, the model seems to achieve poor performance on *PermanentCrop* and *AnnualCrop*. Here are some possible solutions that can be explored:
 
-- Increase model complexity and fine-tune hyperparameters based on specific requirements.
-- Use image augmentation techniques to up-sample images in the underrepresented classes.
-- Integrate a new model that specializes in separating these classes, considering that they are of high importance.
-- Train the dataset with the pre-trained models, i.e  ResNet-50
+- Since it generalises well on most classes, there is no need to increase the model complexity, but worth fine-tuning hyperparameters. For instance, tune LR, batch size etc. 
+- Use image augmentation techniques to up-sample images to increase data variance, for instance in the *PermanentCrops* class. [2]
+- Integrate a new model that specializes in separating these classes. We could introduce a small classifier that would seperate *PermanentCrop* from *HerbaceousVegetation*
+- Train the dataset with the preferably domain-specific pre-trained models, i.e  ResNet-50 [1]
 
 ## Project Navigation
 ### Training
@@ -53,3 +53,10 @@ There are several potential improvements that can be made to this solution. Look
 
 ### Saved models
 1. **Saved models**: [saved models](https://github.com/Mariner07/Satellite_Image_Classification/tree/main/saved_models) with respected model, model weights, architecture and class names.
+
+## References
+[1] [*EuroSAT: A Novel Dataset and Deep Learning
+Benchmark for Land Use and Land Cover
+Classification*, Helber etal](https://arxiv.org/pdf/1709.00029.pdf)
+[2] [*A Comprehensive Survey of Image Augmentation Techniques for Deep Learning*. Xu etal](https://www.sciencedirect.com/science/article/pii/S0031320323000481)
+
