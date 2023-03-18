@@ -14,11 +14,10 @@ The approach taken in this project involved
 
 ## Results
 
-**VGG** achieved 
-- validation accuracy of 90%
-- test accuracy of 80%  
+Overall, **VGG** performed better achieving **validation accuracy** of 90% and **test accuracy** of 80% respectively.
 
-The results were visualized using a confusion matrix and a classification report. Nevertheless, **Shallow CNN** also performed well with val_accuracy of 82% (with epoch =40). 
+![Confusion Matrix for VGG](https://user-images.githubusercontent.com/73485842/226115940-3e8645e4-407d-42fe-80aa-0c15d1eab1d0.png)
+From the confusion matrix above, 64 *PermanentCrop* images misclassified as *HerbaceousVegetation*.  Exploring these misclassified images (in the notebook), it is evident that the misclassified *PermanentCrop* lack in the quality and there is low variability from the *HerbaceousVegetation* images. 
 ## Constraints
 
 There are several constraints for this solution in terms of the data quality, data variability and vague requirements.
