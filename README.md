@@ -37,3 +37,16 @@ There are several potential improvements that can be made to this solution. Look
 - Use image augmentation techniques to up-sample images in the underrepresented classes.
 - Integrate a new model that specializes in separating these classes, considering that they are of high importance.
 - Train the dataset with the pre-trained models, i.e  ResNet-50
+
+## Project Navigation
+### Training
+1. **Training** [Jupyter notebook]: [satellite_classification 2.ipynb](https://github.com/Mariner07/Satellite_Image_Classification/blob/main/satellite_classification%202.ipynb). Include all steps from loading the dataset, to saving the model and evaluation metrics.
+2. **Training Dataset**: [2750](https://github.com/Mariner07/Satellite_Image_Classification/tree/main/2750)
+
+### Inference (testing)
+1. **Inference** [Jupyter notebook]:[inference folder](https://github.com/Mariner07/Satellite_Image_Classification/tree/main/inference) with respected  [inference 2.ipynb](https://github.com/Mariner07/Satellite_Image_Classification/blob/main/inference/inference%202.ipynb) 
+2. **Test dataset**: [test_data](https://github.com/Mariner07/Satellite_Image_Classification/tree/main/inference/test_data)
+3. **Test results** : [test_results_in_csv](https://github.com/Mariner07/Satellite_Image_Classification/blob/main/inference/classification_results.csv) 
+
+### Saved models
+1. **Saved models**: [saved models](https://github.com/Mariner07/Satellite_Image_Classification/tree/main/saved_models) with respected model, model weights, architecture and class names.
