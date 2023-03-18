@@ -17,7 +17,11 @@ The approach taken in this project involved
 Overall, **VGG** performed better achieving **validation accuracy** of 90% and **test accuracy** of 80% respectively.
 
 ![Confusion Matrix for VGG](https://user-images.githubusercontent.com/73485842/226115940-3e8645e4-407d-42fe-80aa-0c15d1eab1d0.png)
-From the confusion matrix above, 64 *PermanentCrop* images misclassified as *HerbaceousVegetation*.  Exploring these misclassified images (in the notebook), it is evident that the misclassified *PermanentCrop* lack in the quality and there is low variability from the *HerbaceousVegetation* images. 
+
+Shortly, let's explore the class with the highest misclassified images. 
+From the confusion matrix above, 64 *PermanentCrop* images misclassified as *HerbaceousVegetation*.  Exploring these misclassified images (in the notebook), it is evident that the misclassified *PermanentCrop* lack in the quality and there is low variability from the *HerbaceousVegetation* images.
+
+
 ## Constraints
 
 There are several constraints for this solution in terms of the data quality, data variability and vague requirements.
